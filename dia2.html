@@ -5,10 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dia 2</title>
     <style>
-        
+        .frame {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #3FAF82;
+            box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.205);
+        }
+
+        .bloco {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .linha1, .linha2, .linha3 {
+            position: relative;
+            width: 90px;
+            height: 10px;
+            top: 0px;
+            left: 0px;
+            margin: 15px 0px;
+            border-radius: 11px;
+            background-color: white;
+            box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.256);
+        }
     </style>
 </head>
 <body>
-    
+    <div class="frame">
+        <div class="bloco">
+            <div class="linha1"></div>
+            <div class="linha2"></div>
+            <div class="linha3"></div>
+        </div>
+    </div>
 </body>
 </html>
