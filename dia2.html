@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dia 2</title>
     <style>
+        @keyframes animacao {
+            from {transform: rotate(0deg)}
+            to {transform: rotate(45deg)}
+        }
+
         .frame {
             position: absolute;
             width: 400px;
@@ -21,6 +26,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+
+            cursor: pointer;
         }
 
         .linha1, .linha2, .linha3 {
@@ -33,6 +40,9 @@
             border-radius: 11px;
             background-color: white;
             box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.256);
+
+            animation-name: animacao;
+            animation-duration: 1s;
         }
     </style>
 </head>
