@@ -1,9 +1,4 @@
-@keyframes animacao {
-    from {transform: rotate(0deg)}
-    to {transform: rotate(45deg)}
-}
-
-.frame {
+#frame {
     position: absolute;
     width: 400px;
     height: 400px;
@@ -14,7 +9,7 @@
     box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.205);
 }
 
-.bloco {
+#bloco {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -23,7 +18,7 @@
     cursor: pointer;
 }
 
-.linha1, .linha2, .linha3 {
+#linha1, #linha2, #linha3 {
     position: relative;
     width: 90px;
     height: 10px;
@@ -33,7 +28,94 @@
     border-radius: 11px;
     background-color: white;
     box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.256);
+}
 
-    animation-name: animacao;
-    animation-duration: 1s;
+.animLinha1 {
+    animation: animacao1 .7s forwards;
+}
+
+.animLinha2 {
+    animation: animacao2 .3s forwards;
+}
+
+.animLinha3 {
+    animation: animacao3 .7s forwards;
+}
+
+@keyframes animacao1 {
+    50% {
+        transform: translateY(25px);
+    }
+
+    100% {
+        transform: translateY(25px) rotate(45deg);
+    }
+}
+
+@keyframes animacao2 {
+    50% {
+        scale: (0);
+        opacity: 1;
+    }
+
+    100% {
+        scale: (0);
+        opacity: 0;
+    }
+}
+
+@keyframes animacao3 {
+    50% {
+        transform: translateY(-25px);
+    }
+
+    100% {
+        transform: translateY(-25px) rotate(-45deg);
+    }
+}
+
+.revAnimLinha1 {
+    animation: revAnimacao1 .7s forwards;
+}
+
+.revAnimLinha2 {
+    animation: revAnimacao2 .3s forwards;
+}
+
+.revAnimLinha3 {
+    animation: revAnimacao3 .7s forwards;
+}
+
+@keyframes revAnimacao1 {
+    0% {
+        
+    }
+
+    50% {
+        transform: translateY(25px);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+@keyframes revAnimacao2 {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes revAnimacao3 {
+    0% {
+
+    }
+    
+    50% {
+        transform: translateY(-25px);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
 }
